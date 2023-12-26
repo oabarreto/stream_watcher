@@ -35,24 +35,42 @@ fetch("https://api.themoviedb.org/3/trending/all/day?language=en-US", options)
         data.release_date || data.first_air_date
       ).replaceAll("-", ".");
 
-      const icon = document.createElement("i");
+      const mediaTypeIcon = document.createElement("i");
 
       const mediaType = document.createElement("span");
       mediaType.setAttribute("class", "media-type");
       if (data.media_type === "movie") {
-        icon.setAttribute("class", "fa fa-film media-type-icon");
-        mediaType.appendChild(icon);
+        mediaTypeIcon.setAttribute(
+          "class",
+          "fa fa-film media-type-mediaTypeIcon"
+        );
+        mediaType.append(mediaTypeIcon);
         mediaType.insertAdjacentText("beforeend", "Movie");
       } else if (data.media_type === "tv") {
-        icon.setAttribute("class", "fa fa-tv media-type-icon");
-        mediaType.appendChild(icon);
+        mediaTypeIcon.setAttribute(
+          "class",
+          "fa fa-tv media-type-mediaTypeIcon"
+        );
+        mediaType.append(mediaTypeIcon);
         mediaType.insertAdjacentText("beforeend", "TV");
       }
 
+      const rating = document.createElement("span");
+      const ratingIcon = document.createElement("i");
+      rating.setAttribute("class", "rating");
+      ratingIcon.setAttribute("class", "fa fa-star rating-star");
+      rating.append(ratingIcon);
+      rating.insertAdjacentText("beforeend", "8.5");
+
       dataCard.append(cardImg);
       dataCard.append(cardTitle);
-      dataCard.append(cardDate);
+
+      if (data.release_date || data.first_air_date) {
+        dataCard.append(cardDate);
+      }
+
       dataCard.append(mediaType);
+      dataCard.append(rating);
       trends.append(dataCard);
     });
   })
