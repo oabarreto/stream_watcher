@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/scrollbar.css" />
     <title>Stream Watcher</title>
   </head>
   <body>
@@ -30,7 +31,7 @@
         </h1>
         <div class="search">
           <i class="fa-solid fa-compass search-icon"></i>
-          <input class="search-input" type="text" placeholder="Buscar..." />
+          <input class="search-input" type="text" placeholder="Search..." />
         </div>
         <div class="contacts">
           <a href="https://github.com/oabarreto" target="_blank">
@@ -40,11 +41,47 @@
       </nav>
     </header>
 
-    <div id="trends" class="trends">
-      <h3 class="trends-title">
-        Top 5 Trends <i class="fa-solid fa-arrow-trend-up trends-icon"></i>
-      </h3>
-    </div>
+    <main>
+      <aside>
+        <section class="sidebar-nav">
+          <div class="sidebar-link">
+            <i class="fa-solid fa-house home-icon"></i>
+          </div>
+        </section>
+      </aside>
+
+      <section class="page">
+        <div class="page-header">
+          <h3 class="page-title">Home</h3>
+        </div>
+        <div class="page-content">
+          <h2 class="page-content-title">
+            Trending
+            <i class="fa-solid fa-arrow-trend-up fa-fade trends-icon"></i>
+          </h2>
+          <div id="trends-container" class="trends-container">
+            <div class="trends-buttons">
+              <div class="trends-controls">
+                <button id="btn-today" class="trends-control-btn">Today</button>
+                <button id="btn-weekly" class="trends-control-btn">
+                  Weekly
+                </button>
+              </div>
+              <div class="trends-scroll">
+                <button id="trends-scroll-btn-l" class="trends-scroll-btn">
+                  <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button id="trends-scroll-btn-r" class="trends-scroll-btn">
+                  <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div id="trends" class="trends"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <script src="./js/app.js"></script>
     <script
       src="https://kit.fontawesome.com/36719f4a33.js"
