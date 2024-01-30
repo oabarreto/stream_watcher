@@ -2,4 +2,4 @@
 
 A basic application for searching for films and series.
 
-Alpha Version
+Alpha Version 0.1
