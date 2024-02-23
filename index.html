@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/icons/stream-watcher.svg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/scrollbar.css" />
+    <title>Stream Watcher</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <h1 class="title">
+          <span>Stream</span>
+          <img
+            src="./assets/icons/stream-watcher.svg"
+            alt="Stream Watcher Logo"
+          /><span>Watcher</span>
+        </h1>
+        <div class="search">
+          <i class="fa-solid fa-compass search-icon"></i>
+          <input class="search-input" type="text" placeholder="Search..." />
+        </div>
+        <div class="contacts">
+          <a href="https://github.com/oabarreto" target="_blank">
+            <i class="fa-brands fa-github git-icon"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <aside>
+        <section class="sidebar-nav">
+          <div class="sidebar-link">
+            <i class="fa-solid fa-house home-icon"></i>
+          </div>
+        </section>
+      </aside>
+
+      <section class="page">
+        <div class="page-header">
+          <h3 class="page-title">Home</h3>
+        </div>
+        <div class="page-content">
+          <h2 class="page-content-title">
+            Trending
+            <i class="fa-solid fa-arrow-trend-up fa-fade trends-icon"></i>
+          </h2>
+          <div id="trends-container" class="trends-container">
+            <div class="trends-buttons">
+              <div class="trends-controls">
+                <button id="btn-today" class="trends-control-btn">Today</button>
+                <button id="btn-weekly" class="trends-control-btn">
+                  Weekly
+                </button>
+              </div>
+              <div class="trends-scroll">
+                <button id="trends-scroll-btn-l" class="trends-scroll-btn">
+                  <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button id="trends-scroll-btn-r" class="trends-scroll-btn">
+                  <i class="fa-solid fa-angle-right"></i>
+                </button>
+              </div>
+            </div>
+            <div id="trends" class="trends"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/36719f4a33.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
